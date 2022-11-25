@@ -1,0 +1,42 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<h1>Busca a tus alumnos:</h1>
+
+
+
+<form action="" method="get">
+    {{ formulario.as_p }}
+
+    <p>
+        Nombre alumno: <input type="text" name="nombre_alumno">
+
+    </p>
+    
+    <input type="submit", value="Buscar">
+
+    {% if listado_alumnos %}
+
+    <ul>
+
+        {% for alumno in listado_alumnos %}
+        <li>{{alumno.Nombre}} {{alumno.Apellido}}</li>
+        
+        {% endfor%}
+    </ul>
+
+    {% endif %}
+
+
+
+
+</form>
+
+
+
+
+
+
+{% endblock %}

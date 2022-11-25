@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<h1>Inscribite en el Taller</h1>
+
+
+
+<form action="" method="post">
+
+    {% csrf_token %}
+
+    {{ formulario.as_p }}
+    
+    <input type="submit", value="Enviar">
+</form>
+
+
+{% endblock %}
